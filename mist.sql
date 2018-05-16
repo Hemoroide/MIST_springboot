@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 07, 2018 at 09:55 AM
+-- Generation Time: May 16, 2018 at 01:08 PM
 -- Server version: 5.6.38-log
--- PHP Version: 5.6.31
+-- PHP Version: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -89,8 +89,9 @@ CREATE TABLE IF NOT EXISTS `arme` (
   `type_munition` varchar(255) NOT NULL,
   `nom_arme` varchar(255) NOT NULL,
   `numero_serie_arme` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `numero_serie_arme` (`numero_serie_arme`)
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `arme`
@@ -98,9 +99,9 @@ CREATE TABLE IF NOT EXISTS `arme` (
 
 INSERT INTO `arme` (`id`, `type_arme`, `type_munition`, `nom_arme`, `numero_serie_arme`) VALUES
 (4, 'Semi-Automatique', '22', 'Beretta', 'EX15430984'),
-(5, 'Fusil à pompe', '12', 'Winchester', 'LP43GP543'),
-(8, 'Extraterrestre', 'Sonic', 'Cricket Infernal', 'MenInBlack'),
-(9, 'fusil a pompe', '45', 'remington', 'FDSQDSV');
+(14, 'Extraterrestre', 'Sonic', 'Cricket infernal', 'MenInBlack'),
+(20, 'Epee', 'Aucune', 'Ultima', 'Derniere Arme'),
+(27, 'Battle Station', 'Laser', 'Death Star', 'Episode 4');
 
 -- --------------------------------------------------------
 
